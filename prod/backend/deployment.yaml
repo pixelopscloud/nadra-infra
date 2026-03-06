@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: nadra-prod
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: nadraacr.azurecr.io/nadra-backend:latest
+        env:
+        - name: DB_HOST
+          value: postgres
+        - name: DB_USER
+          value: nadra
+        - name: DB_PASSWORD
+          value: nadra123
+        - name: DB_NAME
+          value: nadradb
+        ports:
+        - containerPort: 3000
