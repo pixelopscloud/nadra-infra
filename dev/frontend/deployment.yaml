@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: nadraacr.azurecr.io/nadra-frontend:be2667e7b1075c1ad4606a0ad7741e92079e77e0
+        image: nadraacr.azurecr.io/nadra-frontend:71357d4639decadb34dbf0d9febc7ecefb30d949
         ports:
         - containerPort: 80
