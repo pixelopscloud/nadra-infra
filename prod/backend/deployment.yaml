@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: nadraacr.azurecr.io/nadra-backend:1836e536dcecad201fedf36d148105ec4c7da046
+        image: nadraacr.azurecr.io/nadra-backend:e053e325bfb97a2d4a9c88297c378bc8c2f94b1d
         env:
         - name: DB_HOST
           value: postgres
